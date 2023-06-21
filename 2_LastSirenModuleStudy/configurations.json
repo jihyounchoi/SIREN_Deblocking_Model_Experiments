@@ -1,0 +1,51 @@
+{
+    "param_settings": [
+        {
+            "activation_string" : "R,R,R/R,R,R/R,R,R/R,R,R/R,R,R/S,S,S",
+            "omega_string" : "1/1/1/1/1/1",
+            "residual_string" : "F/T/T/T/T/F",
+            "optimizer_function": "ADAM",
+            "loss" : "L2",
+            "learning_rate": 0.001,
+            "num_epoch": 1000,
+            "milestone" : [100, 200, 300, 400, 500, 600, 700, 800, 900],
+            "gamma_optim" : 0.5,
+            "batchsize_train": 32,
+            "batchsize_val": 10,
+            "base_dir": "./results/omega_1",
+            "ckpt_dir_to_load_manually": "",
+            "ckpt_dir_save": "checkpoints",
+            "log_dir": "log",
+            "patch_size": 32,
+            "datadir_train": "../Dataset/trainset/DIV2K_train_cropped",
+            "datadir_val": "../Dataset/trainset/DIV2K_val_cropped",
+            "device": "cuda",
+            "step_to_save": 500,
+            "QF_candidates": [30]
+        },
+        
+        {
+            "activation_string" : "R,R,R/R,R,R/R,R,R/R,R,R/R,R,R/S,S,S",
+            "omega_string" : "1/1/1/1/1/50",
+            "residual_string" : "F/T/T/T/T/F",
+            "optimizer_function": "ADAM",
+            "loss" : "L2",
+            "learning_rate": 0.001,
+            "num_epoch": 1000,
+            "milestone" : [100, 200, 300, 400, 500, 600, 700, 800, 900],
+            "gamma_optim" : 0.5,
+            "batchsize_train": 32,
+            "batchsize_val": 10,
+            "base_dir": "./results/omega_50",
+            "ckpt_dir_to_load_manually": "",
+            "ckpt_dir_save": "checkpoints",
+            "log_dir": "log",
+            "patch_size": 32,
+            "datadir_train": "../Dataset/trainset/DIV2K_train_cropped",
+            "datadir_val": "../Dataset/trainset/DIV2K_val_cropped",
+            "device": "cuda",
+            "step_to_save": 500,
+            "QF_candidates": [30]
+        }
+    ]
+}
