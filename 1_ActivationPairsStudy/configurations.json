@@ -1,0 +1,27 @@
+{
+    "param_settings": [
+        {
+            "activation_string" : "S,S,S/S,S,S/S,S,S/S,S,S/S,S,S/S,S,S",
+            "omega_string" : "1/1/1/1/1/1",
+            "residual_string" : "F/T/T/T/T/T",
+            "optimizer_function": "ADAM",
+            "loss" : "L2",
+            "learning_rate": 0.001,
+            "num_epoch": 200,
+            "milestone" : [20, 40, 60, 80, 100, 120, 140, 160, 180],
+            "gamma_optim" : 0.5,
+            "batchsize_train": 32,
+            "batchsize_val": 10,
+            "base_dir": "./results/SSSNetwork_200",
+            "ckpt_dir_to_load_manually": "",
+            "ckpt_dir_save": "checkpoints",
+            "log_dir": "log",
+            "patch_size": 32,
+            "datadir_train": "../Dataset/trainset/DIV2K_train_cropped",
+            "datadir_val": "../Dataset/trainset/DIV2K_val_cropped",
+            "device": "cuda",
+            "step_to_save": 100,
+            "QF_candidates": [30]
+        }
+    ]
+}

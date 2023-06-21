@@ -1,0 +1,78 @@
+##################################################
+           INITIALIZE TEST ENVIRONMENT            
+##################################################
+Testing on device: cpu
+datadir_test: ../Dataset/testset/LIVE1_gray
+qf_candidates: [30]
+batchsize_test: 1
+base_dir: ./result_test/PlainSSS_1000
+ckpt_dir: model_zoo/PlainSSS_1000.pth
+model_: CustomNetwork(
+  (conv_first): Conv2d(1, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  (block0): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (block1): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (block2): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (block3): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (block4): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (block5): CustomBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv2): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+    (conv3): Conv2d(32, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+  )
+  (conv_last): Conv2d(32, 1, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+)
+device: cpu
+
+
+RESULTS : 
+DEBLOCKING PERFORMANCE OF bikes.png :	 MSE 0.001133 -> 0.001133 | PSNR 29.457774 -> 29.457556 | PSNR-B 29.457774 -> 29.457556 | SSIM 0.892831 -> 0.892833
+DEBLOCKING PERFORMANCE OF building2.png :	 MSE 0.001957 -> 0.001957 | PSNR 27.084996 -> 27.084731 | PSNR-B 27.084996 -> 27.084731 | SSIM 0.886813 -> 0.886814
+DEBLOCKING PERFORMANCE OF buildings.png :	 MSE 0.001293 -> 0.001294 | PSNR 28.882473 -> 28.882205 | PSNR-B 28.718842 -> 28.718585 | SSIM 0.887592 -> 0.887591
+DEBLOCKING PERFORMANCE OF caps.png :	 MSE 0.000295 -> 0.000295 | PSNR 35.296653 -> 35.296283 | PSNR-B 35.296653 -> 35.296283 | SSIM 0.914564 -> 0.914559
+DEBLOCKING PERFORMANCE OF carnivaldolls.png :	 MSE 0.000660 -> 0.000660 | PSNR 31.802030 -> 31.803208 | PSNR-B 31.802030 -> 31.803208 | SSIM 0.916040 -> 0.916048
+DEBLOCKING PERFORMANCE OF cemetry.png :	 MSE 0.001020 -> 0.001020 | PSNR 29.912440 -> 29.912224 | PSNR-B 29.903362 -> 29.903148 | SSIM 0.878372 -> 0.878369
+DEBLOCKING PERFORMANCE OF churchandcapitol.png :	 MSE 0.000881 -> 0.000881 | PSNR 30.548192 -> 30.548334 | PSNR-B 29.684008 -> 29.684124 | SSIM 0.907882 -> 0.907885
+DEBLOCKING PERFORMANCE OF coinsinfountain.png :	 MSE 0.000746 -> 0.000746 | PSNR 31.275360 -> 31.274803 | PSNR-B 31.275361 -> 31.274803 | SSIM 0.888881 -> 0.888875
+DEBLOCKING PERFORMANCE OF dancers.png :	 MSE 0.001382 -> 0.001382 | PSNR 28.594393 -> 28.593546 | PSNR-B 28.594393 -> 28.593546 | SSIM 0.889661 -> 0.889653
+DEBLOCKING PERFORMANCE OF flowersonih35.png :	 MSE 0.001896 -> 0.001896 | PSNR 27.221738 -> 27.221727 | PSNR-B 27.221738 -> 27.221727 | SSIM 0.911010 -> 0.911008
+DEBLOCKING PERFORMANCE OF house.png :	 MSE 0.000561 -> 0.000561 | PSNR 32.508645 -> 32.508395 | PSNR-B 32.508646 -> 32.508395 | SSIM 0.870279 -> 0.870273
+DEBLOCKING PERFORMANCE OF lighthouse2.png :	 MSE 0.000716 -> 0.000716 | PSNR 31.449088 -> 31.448941 | PSNR-B 31.449089 -> 31.448941 | SSIM 0.904446 -> 0.904447
+DEBLOCKING PERFORMANCE OF lighthouse3.png :	 MSE 0.000637 -> 0.000637 | PSNR 31.955689 -> 31.955357 | PSNR-B 31.783578 -> 31.783259 | SSIM 0.879245 -> 0.879243
+DEBLOCKING PERFORMANCE OF manfishing.png :	 MSE 0.000704 -> 0.000704 | PSNR 31.523033 -> 31.522496 | PSNR-B 31.523033 -> 31.522496 | SSIM 0.903605 -> 0.903610
+DEBLOCKING PERFORMANCE OF monarch.png :	 MSE 0.000362 -> 0.000362 | PSNR 34.408423 -> 34.408447 | PSNR-B 34.356992 -> 34.357015 | SSIM 0.943518 -> 0.943510
+DEBLOCKING PERFORMANCE OF ocean.png :	 MSE 0.000468 -> 0.000468 | PSNR 33.293765 -> 33.292936 | PSNR-B 33.293765 -> 33.292936 | SSIM 0.883827 -> 0.883821
+DEBLOCKING PERFORMANCE OF paintedhouse.png :	 MSE 0.000997 -> 0.000997 | PSNR 30.014458 -> 30.014181 | PSNR-B 30.014458 -> 30.014180 | SSIM 0.882091 -> 0.882089
+DEBLOCKING PERFORMANCE OF parrots.png :	 MSE 0.000208 -> 0.000208 | PSNR 36.813026 -> 36.813054 | PSNR-B 36.580172 -> 36.580199 | SSIM 0.933760 -> 0.933761
+DEBLOCKING PERFORMANCE OF plane.png :	 MSE 0.000412 -> 0.000412 | PSNR 33.845791 -> 33.848757 | PSNR-B 33.845790 -> 33.848757 | SSIM 0.917876 -> 0.917887
+DEBLOCKING PERFORMANCE OF rapids.png :	 MSE 0.000774 -> 0.000774 | PSNR 31.112805 -> 31.112671 | PSNR-B 31.112805 -> 31.112671 | SSIM 0.867302 -> 0.867300
+DEBLOCKING PERFORMANCE OF sailing1.png :	 MSE 0.000824 -> 0.000824 | PSNR 30.839258 -> 30.839796 | PSNR-B 30.839258 -> 30.839796 | SSIM 0.876545 -> 0.876549
+DEBLOCKING PERFORMANCE OF sailing2.png :	 MSE 0.000361 -> 0.000361 | PSNR 34.427082 -> 34.425964 | PSNR-B 34.427082 -> 34.425964 | SSIM 0.913804 -> 0.913796
+DEBLOCKING PERFORMANCE OF sailing3.png :	 MSE 0.000402 -> 0.000402 | PSNR 33.961685 -> 33.961166 | PSNR-B 33.961685 -> 33.961166 | SSIM 0.901601 -> 0.901591
+DEBLOCKING PERFORMANCE OF sailing4.png :	 MSE 0.000676 -> 0.000676 | PSNR 31.701516 -> 31.700835 | PSNR-B 31.701516 -> 31.700835 | SSIM 0.871098 -> 0.871098
+DEBLOCKING PERFORMANCE OF statue.png :	 MSE 0.000473 -> 0.000473 | PSNR 33.254080 -> 33.253607 | PSNR-B 33.254080 -> 33.253607 | SSIM 0.902038 -> 0.902041
+DEBLOCKING PERFORMANCE OF stream.png :	 MSE 0.001945 -> 0.001945 | PSNR 27.110535 -> 27.110381 | PSNR-B 27.110535 -> 27.110381 | SSIM 0.833572 -> 0.833572
+DEBLOCKING PERFORMANCE OF studentsculpture.png :	 MSE 0.001421 -> 0.001421 | PSNR 28.472742 -> 28.472689 | PSNR-B 26.828312 -> 26.828276 | SSIM 0.893057 -> 0.893058
+DEBLOCKING PERFORMANCE OF woman.png :	 MSE 0.000989 -> 0.000989 | PSNR 30.048744 -> 30.048224 | PSNR-B 30.048743 -> 30.048224 | SSIM 0.867386 -> 0.867389
+DEBLOCKING PERFORMANCE OF womanhat.png :	 MSE 0.000398 -> 0.000398 | PSNR 33.999266 -> 33.999166 | PSNR-B 33.999266 -> 33.999165 | SSIM 0.880616 -> 0.880620
+
+AVERAGE PERFORMANCE:					 MSE 0.000848 -> 0.000848 | PSNR 31.407437 -> 31.407299 | PSNR-B 31.299240 -> 31.299103 | SSIM 0.893080 -> 0.893079
